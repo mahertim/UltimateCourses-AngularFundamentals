@@ -9,7 +9,9 @@ import { Passenger } from '../../models/passenger.interface';
 })
 export class PassengerDashboardComponent implements OnInit {
   passengers: Passenger[] = [];
+
   constructor() {}
+
   ngOnInit() {
     this.passengers = [
       {
@@ -46,5 +48,13 @@ export class PassengerDashboardComponent implements OnInit {
         checkedIn: false,
       },
     ];
+  }
+
+  handleRemove(event: any) {
+    console.log(event);
+  }
+
+  handleEdit(event: any) {
+    console.log(event);
   }
 }
