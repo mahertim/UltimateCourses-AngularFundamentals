@@ -9,16 +9,7 @@ interface Passenger {
 @Component({
   selector: 'app-root',
   styleUrls: ['app.component.scss'],
-  template: `
-    <div class="app">
-      <h3>Airline Passengers</h3>
-      <ul>
-        <li *ngFor="let passenger of passengers; let i = index">
-          {{ i }}: {{ passenger.fullname }}
-        </li>
-      </ul>
-    </div>
-  `,
+  templateUrl: 'app.component.html',
 })
 export class AppComponent {
   passengers: Passenger[] = [
