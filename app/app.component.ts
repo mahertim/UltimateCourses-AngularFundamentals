@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 
+interface Child {
+  name: string;
+  age: number;
+}
+
 interface Passenger {
   id: number;
   fullname: string;
   checkedIn: boolean;
   checkedInDate?: number;
+  children?: Child[];
 }
 
 @Component({
@@ -24,6 +30,10 @@ export class AppComponent {
       id: 2,
       fullname: 'Rose',
       checkedIn: false,
+      children: [
+        { name: 'Ted', age: 12 },
+        { name: 'Chloe', age: 7 },
+      ],
     },
     {
       id: 3,
@@ -36,6 +46,7 @@ export class AppComponent {
       fullname: 'Louise',
       checkedIn: true,
       checkedInDate: 1490742000000,
+      children: [{ name: 'Jessica', age: 12 }],
     },
     {
       id: 5,
