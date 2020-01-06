@@ -14,11 +14,11 @@
       "baggage": "hand-only"
     },
     {
-      "id": 3,
       "fullname": "James",
+      "id": 3,
       "checkedIn": true,
-      "checkedInDate": 1490742000000,
-      "baggage": "hold-only"
+      "baggage": "hold-only",
+      "checkedInDate": 1578344622878
     },
     {
       "id": 4,
