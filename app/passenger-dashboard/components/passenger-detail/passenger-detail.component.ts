@@ -1,7 +1,6 @@
 import {
   Component,
   OnChanges,
-  OnInit,
   Input,
   Output,
   EventEmitter,
@@ -14,7 +13,7 @@ import { Passenger } from '../../models/passenger.interface';
   styleUrls: ['./passenger-detail.component.scss'],
   templateUrl: './passenger-detail.component.html',
 })
-export class PassengerDetailComponent implements OnChanges, OnInit {
+export class PassengerDetailComponent implements OnChanges {
   @Input()
   detail: Passenger | null = null;
 
@@ -32,11 +31,6 @@ export class PassengerDetailComponent implements OnChanges, OnInit {
     if (changes.detail) {
       this.detail = Object.assign({}, changes.detail.currentValue);
     }
-    console.log('ngOnChanges');
-  }
-
-  ngOnInit() {
-    console.log('ngOnInit');
   }
 
   onNameChange(value: string) {
