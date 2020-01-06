@@ -10,16 +10,7 @@
       "id": 2,
       "fullname": "Rose",
       "checkedIn": false,
-      "children": [
-        {
-          "name": "Ted",
-          "age": 12
-        },
-        {
-          "name": "Chloe",
-          "age": 7
-        }
-      ]
+      "baggage": ""
     },
     {
       "id": 3,
@@ -32,12 +23,7 @@
       "fullname": "Louise",
       "checkedIn": true,
       "checkedInDate": 1490742000000,
-      "children": [
-        {
-          "name": "Jessica",
-          "age": 12
-        }
-      ]
+      "baggage": ""
     },
     {
       "id": 5,
