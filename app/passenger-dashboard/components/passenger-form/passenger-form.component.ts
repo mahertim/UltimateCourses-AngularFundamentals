@@ -12,4 +12,10 @@ export class PassengerFormComponent {
   detail: Passenger | null = null;
 
   constructor() {}
+
+  toggleCheckIn(checkedIn: boolean) {
+    if (checkedIn && this.detail) {
+      this.detail.checkedInDate = Date.now();
+    }
+  }
 }
