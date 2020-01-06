@@ -21,7 +21,7 @@ export class AppComponent {
     {
       link: '/passengers',
       name: 'Passengers',
-      exact: true,
+      exact: false,
     },
     {
       link: '/oops',

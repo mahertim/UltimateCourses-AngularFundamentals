@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // containers
 import { PassengerDashboardComponent } from './containers/passenger-dashboard/passenger-dashboard.component';
-import { PassengerViewerContainer } from './containers/passenger-viewer/passenger-viewer.component';
+import { PassengerViewerComponent } from './containers/passenger-viewer/passenger-viewer.component';
 
 // components
 import { PassengerCountComponent } from './components/passenger-count/passenger-count.component';
@@ -19,7 +19,16 @@ import { PassengerDashboardService } from './passenger-dashboard.service';
 const routes: Routes = [
   {
     path: 'passengers',
-    component: PassengerDashboardComponent,
+    children: [
+      {
+        path: '',
+        component: PassengerDashboardComponent,
+      },
+      {
+        path: ':id',
+        component: PassengerViewerComponent,
+      },
+    ],
   },
 ];
 
@@ -28,7 +37,7 @@ const routes: Routes = [
     PassengerDashboardComponent,
     PassengerCountComponent,
     PassengerDetailComponent,
-    PassengerViewerContainer,
+    PassengerViewerComponent,
     PassengerFormComponent,
   ],
   imports: [

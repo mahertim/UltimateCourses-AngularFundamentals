@@ -9,7 +9,7 @@ import { Passenger } from '../../models/passenger.interface';
   styleUrls: ['passenger-viewer.component.scss'],
   templateUrl: 'passenger-viewer.component.html',
 })
-export class PassengerViewerContainer implements OnInit {
+export class PassengerViewerComponent implements OnInit {
   passenger: Passenger | null = null;
 
   constructor(private passengerService: PassengerDashboardService) {}
