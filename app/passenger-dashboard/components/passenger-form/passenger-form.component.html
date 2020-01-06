@@ -1,6 +1,4 @@
 <form #form="ngForm" novalidate>
-  {{ detail | json }}
-
   <div>
     Passenger name:
     <input
@@ -24,7 +22,7 @@
       #id="ngModel"
       [ngModel]="detail?.id"
     />
-    <div *ngIf="id.errors?.required && id.touched" class="error">
+    <div *ngIf="id.errors?.required && id.dirty" class="error">
       Passenger id is required
     </div>
   </div>
@@ -57,7 +55,7 @@
     </select>
   </div>
 
-  <div>{{ form.value | json }}</div>
-  <div>Valid: {{ form.valid | json }}</div>
-  <div>Invalid: {{ form.invalid | json }}</div>
+  <button type="submit" [disabled]="form.invalid">
+    Update passenger
+  </button>
 </form>
