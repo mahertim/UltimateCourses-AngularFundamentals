@@ -1,4 +1,8 @@
-<form #form="ngForm" novalidate>
+<form
+  (ngSubmit)="handleSubmit(form.value, form.valid)"
+  #form="ngForm"
+  novalidate
+>
   <div>
     Passenger name:
     <input
@@ -39,7 +43,11 @@
 
   <div *ngIf="form.value.checkedIn">
     Check in date:
-    <input type="number" name="checkInDate" [ngModel]="detail?.checkedInDate" />
+    <input
+      type="number"
+      name="checkedInDate"
+      [ngModel]="detail?.checkedInDate"
+    />
   </div>
 
   <div>

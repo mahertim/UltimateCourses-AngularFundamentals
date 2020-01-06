@@ -19,4 +19,12 @@ export class PassengerViewerContainer implements OnInit {
       .getPassenger(1)
       .subscribe((data: Passenger) => (this.passenger = data));
   }
+
+  onUpdatePassenger(event: Passenger): void {
+    this.passengerService
+      .updatePassenger(event)
+      .subscribe(
+        () => (this.passenger = Object.assign({}, this.passenger, event)),
+      );
+  }
 }
