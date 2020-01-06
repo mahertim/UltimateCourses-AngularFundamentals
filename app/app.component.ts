@@ -24,7 +24,7 @@ export class AppComponent {
       exact: false,
     },
     {
-      link: '/oops',
+      link: '/404',
       name: '404',
       exact: false,
     },
