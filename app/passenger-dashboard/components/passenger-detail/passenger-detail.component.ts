@@ -18,10 +18,13 @@ export class PassengerDetailComponent implements OnChanges {
   detail: Passenger | null = null;
 
   @Output()
-  edit: EventEmitter<any> = new EventEmitter();
+  edit: EventEmitter<Passenger> = new EventEmitter<Passenger>();
 
   @Output()
-  remove: EventEmitter<any> = new EventEmitter();
+  remove: EventEmitter<Passenger> = new EventEmitter<Passenger>();
+
+  @Output()
+  view: EventEmitter<Passenger> = new EventEmitter<Passenger>();
 
   editing: boolean = false;
 
@@ -38,11 +41,15 @@ export class PassengerDetailComponent implements OnChanges {
   }
 
   toggleEdit() {
-    if (this.editing) this.edit.emit(this.detail);
+    if (this.editing && this.detail) this.edit.emit(this.detail);
     this.editing = !this.editing;
   }
 
   onRemove() {
-    this.remove.emit(this.detail);
+    if (this.detail) this.remove.emit(this.detail);
+  }
+
+  goToPassenger() {
+    if (this.detail) this.view.emit(this.detail);
   }
 }
